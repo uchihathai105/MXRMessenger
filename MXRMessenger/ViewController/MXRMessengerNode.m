@@ -6,7 +6,7 @@
 //  Copyright © 2017 Two To Tango. All rights reserved.
 //
 
-#import <MXRMessenger/MXRMessengerNode.h>
+#import "MXRMessengerNode.h"
 
 @implementation MXRMessengerNode
 

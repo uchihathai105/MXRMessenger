@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import <MXRMessenger/MXRMessengerInputToolbar.h>
+#import "MXRMessengerInputToolbar.h"
 
 /**
  * This container view is meant to be returned as an inputAccessoryView

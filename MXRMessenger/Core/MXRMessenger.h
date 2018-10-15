@@ -18,24 +18,24 @@
 #endif
 
 // core
-#import <MXRMessenger/MXRGrowingEditableTextNode.h>
-#import <MXRMessenger/MXRMessengerMedium.h>
-#import <MXRMessenger/UIBezierPath+MXRMessenger.h>
-#import <MXRMessenger/UIColor+MXRMessenger.h>
-#import <MXRMessenger/UIImage+MXRMessenger.h>
+#import "MXRGrowingEditableTextNode.h"
+#import "MXRMessengerMedium.h"
+#import "UIBezierPath+MXRMessenger.h"
+#import "UIColor+MXRMessenger.h"
+#import "UIImage+MXRMessenger.h"
 
 
 // message cell
 #if MXR_MESSAGE_CELL
-#import <MXRMessenger/MXRMessageCell.h>
+#import "MXRMessageCell.h"
 #endif
 
 
 // view controller
 #if MXR_MESSENGER_VC
-#import <MXRMessenger/MXRMessengerViewController.h>
-#import <MXRMessenger/MXRMessengerNode.h>
-#import <MXRMessenger/MXRMessengerInputToolbar.h>
+#import "MXRMessengerViewController.h"
+#import "MXRMessengerNode.h"
+#import "MXRMessengerInputToolbar.h"
 #endif
 
 #endif /* MXRMessenger_h */

@@ -6,7 +6,7 @@
 //  Copyright © 2017 Two To Tango. All rights reserved.
 //
 
-#import <MXRMessenger/UIColor+MXRMessenger.h>
+#import "UIColor+MXRMessenger.h"
 
 @implementation UIColor (MXRMessenger)
 

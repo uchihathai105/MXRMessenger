@@ -6,7 +6,7 @@
 //  Copyright © 2017 Two To Tango. All rights reserved.
 //
 
-#import <MXRMessenger/MXRGrowingEditableTextNode.h>
+#import "MXRGrowingEditableTextNode.h"
 
 @interface MXRGrowingEditableTextNode()
 

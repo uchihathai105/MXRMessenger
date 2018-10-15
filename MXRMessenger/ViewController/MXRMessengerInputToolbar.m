@@ -6,9 +6,8 @@
 //  Copyright © 2017 Two To Tango. All rights reserved.
 //
 
-#import <MXRMessenger/MXRMessengerInputToolbar.h>
-
-#import <MXRMessenger/UIColor+MXRMessenger.h>
+#import "MXRMessengerInputToolbar.h"
+#import "UIColor+MXRMessenger.h"
 
 @implementation MXRMessengerInputToolbar {
     ASImageNode* _textInputBackgroundNode;
@@ -88,6 +87,16 @@
     NSString* text = [_textInputNode.attributedText.string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     _textInputNode.attributedText = [[NSAttributedString alloc] initWithString:@"" attributes:_textInputNode.typingAttributes];
     return text;
+}
+
+- (void)setLeftButtonsNode:(ASDisplayNode *)leftButtonsNode {
+    _leftButtonsNode = leftButtonsNode;
+    [self setNeedsLayout];
+}
+
+- (void)setRightButtonsNode:(ASDisplayNode *)rightButtonsNode {
+    _rightButtonsNode = rightButtonsNode;
+    [self setNeedsLayout];
 }
 
 @end
@@ -215,6 +224,24 @@
     icon.displaysAsynchronously = NO; // otherwise it doesnt appear until viewDidAppear
     button.displaysAsynchronously = NO;
     icon.color = toolbar.tintColor;
+    CGFloat iconWidth = ceilf(toolbar.font.lineHeight) + 2.0f;
+    icon.style.preferredSize = CGSizeMake(iconWidth, iconWidth);
+    button.style.preferredSize = CGSizeMake(iconWidth + 22.0f, toolbar.heightOfTextNodeWithOneLineOfText);
+    button.hitTestSlop = UIEdgeInsetsMake(-4.0f, 0, -10.0f, 0.0f);
+    return button;
+}
+
++ (instancetype)buttonWithImage:(UIImage*)image matchingToolbar:(MXRMessengerInputToolbar*)toolbar {
+    MXRMessengerIconNode *icon = [[MXRMessengerIconNode alloc] initWithViewBlock:^{
+        UIImageView *imageView  = [[UIImageView alloc] init];
+        imageView.image = image;
+        imageView.contentMode = UIViewContentModeScaleAspectFill;
+        return imageView;
+    }];
+    
+    MXRMessengerIconButtonNode* button = [[MXRMessengerIconButtonNode alloc] init];
+    button.icon = icon;
+    button.displaysAsynchronously = NO;
     CGFloat iconWidth = ceilf(toolbar.font.lineHeight) + 2.0f;
     icon.style.preferredSize = CGSizeMake(iconWidth, iconWidth);
     button.style.preferredSize = CGSizeMake(iconWidth + 22.0f, toolbar.heightOfTextNodeWithOneLineOfText);

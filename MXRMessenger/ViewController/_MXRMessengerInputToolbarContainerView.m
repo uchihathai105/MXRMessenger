@@ -6,7 +6,8 @@
 //  Copyright © 2017 Two To Tango. All rights reserved.
 //
 
-#import <MXRMessenger/_MXRMessengerInputToolbarContainerView.h>
+#import "MXRMessengerInputToolbar.h"
+#import "_MXRMessengerInputToolbarContainerView.h"
 
 static NSString* MXRNewCalculatedSizeNotification = @"MXRNewCalculatedSizeNotification";
 

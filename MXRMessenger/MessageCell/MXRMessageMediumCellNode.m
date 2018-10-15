@@ -8,7 +8,7 @@
 
 #import "MXRMessageMediumCellNode.h"
 
-#import <MXRMessenger/UIImage+MXRMessenger.h>
+#import "UIImage+MXRMessenger.h"
 
 @implementation MXRMessageMediumCellNode {
     MXRMessageNodeConfiguration* _configuration;

@@ -8,8 +8,8 @@
 
 #import <AsyncDisplayKit/AsyncDisplayKit.h>
 
-#import <MXRMessenger/MXRMessengerNode.h>
-#import <MXRMessenger/MXRMessengerInputToolbar.h>
+#import "MXRMessengerNode.h"
+#import "MXRMessengerInputToolbar.h"
 
 
 @interface MXRMessengerViewController : ASViewController <MXRMessengerNode*> <ASTableDelegate>

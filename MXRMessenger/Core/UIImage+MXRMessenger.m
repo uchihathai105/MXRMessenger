@@ -6,9 +6,9 @@
 //  Copyright © 2017 Two To Tango. All rights reserved.
 //
 
-#import <MXRMessenger/UIImage+MXRMessenger.h>
+#import "UIImage+MXRMessenger.h"
 
-#import <MXRMessenger/UIBezierPath+MXRMessenger.h>
+#import "UIBezierPath+MXRMessenger.h"
 
 @implementation UIImage (MXRMessenger)
 

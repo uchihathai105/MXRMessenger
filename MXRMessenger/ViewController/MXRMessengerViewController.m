@@ -6,9 +6,9 @@
 //  Copyright © 2017 Two To Tango. All rights reserved.
 //
 
-#import <MXRMessenger/MXRMessengerViewController.h>
+#import "MXRMessengerViewController.h"
 
-#import <MXRMessenger/_MXRMessengerInputToolbarContainerView.h>
+#import "_MXRMessengerInputToolbarContainerView.h"
 
 @interface MXRMessengerViewController ()
 

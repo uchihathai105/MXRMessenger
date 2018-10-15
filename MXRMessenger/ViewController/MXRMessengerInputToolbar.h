@@ -8,7 +8,7 @@
 
 #import <AsyncDisplayKit/AsyncDisplayKit.h>
 
-#import <MXRMessenger/MXRGrowingEditableTextNode.h>
+#import "MXRGrowingEditableTextNode.h"
 
 @class MXRMessengerIconButtonNode;
 
@@ -50,5 +50,6 @@
 @property (nonatomic, strong) MXRMessengerIconNode* icon;
 
 + (instancetype)buttonWithIcon:(MXRMessengerIconNode*)icon matchingToolbar:(MXRMessengerInputToolbar*)toolbar;
++ (instancetype)buttonWithImage:(UIImage*)image matchingToolbar:(MXRMessengerInputToolbar*)toolbar;
 
 @end
